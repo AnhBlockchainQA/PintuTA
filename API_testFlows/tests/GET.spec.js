@@ -22,7 +22,7 @@ test('GET response validation', async ({ request }) => {
       expect(typeof title).toBe('string');
       expect(typeof body).toBe('string');
 
-      console.log(`Data Type at Id: ${id} are correct.`);
+      //console.log(`Data Type at Id: ${id} are correct.`);
     }
   } catch (parseError) {
     console.log('Failed to parse response:', parseError.message);

@@ -1,0 +1,78 @@
+# InvalidDataResgisterFunction.yaml
+appId: com.loginmodule.learning
+---
+- launchApp
+- tapOn:
+    id: "com.miui.home:id/icon_icon"
+    index: 3
+- tapOn: "No account yet? Create one"
+- runScript: "../scripts/generateCredentials.js"
+# Ensure that user needs to input Name
+- scrollUntilVisible:
+    element:
+      id: "com.loginmodule.learning:id/appCompatButtonRegister"
+    direction: DOWN
+- tapOn:
+    id: "com.loginmodule.learning:id/appCompatButtonRegister"
+- assertVisible: "Enter Full Name"
+- assertVisible: "Name"
+- assertVisible:
+    id: "com.loginmodule.learning:id/textInputLayoutName"
+- tapOn:
+    id: "com.loginmodule.learning:id/textInputEditTextName"
+- inputText: "${output.credentials.name}"
+# Ensure that user needs to input Email
+- tapOn:
+    id: "com.android.systemui:id/back"
+- scrollUntilVisible:
+    element:
+      id: "com.loginmodule.learning:id/appCompatButtonRegister"
+    direction: DOWN
+- tapOn:
+    id: "com.loginmodule.learning:id/appCompatButtonRegister"
+- assertVisible: "Enter Valid Email"
+- tapOn:
+    id: "com.loginmodule.learning:id/textInputEditTextEmail"
+- inputText: "${output.credentials.email}"
+# Ensure that user needs to input Password
+- tapOn:
+    id: "com.android.systemui:id/back"
+- scrollUntilVisible:
+    element:
+      id: "com.loginmodule.learning:id/appCompatButtonRegister"
+    direction: DOWN
+- tapOn:
+    id: "com.loginmodule.learning:id/appCompatButtonRegister"
+- assertVisible: "Enter Password"
+- tapOn:
+    id: "com.loginmodule.learning:id/textInputEditTextPassword"
+- inputText: "${output.credentials.password}"
+# Ensure that user needs to input Confirm Password
+- tapOn:
+    id: "com.android.systemui:id/back"
+- scrollUntilVisible:
+    element:
+      id: "com.loginmodule.learning:id/appCompatButtonRegister"
+    direction: DOWN
+- tapOn:
+    id: "com.loginmodule.learning:id/appCompatButtonRegister"
+- assertVisible: "Password Does Not Matches"
+# Ensure that user needs to input Confirm Password match with Password
+- scrollUntilVisible:
+    element:
+      id: "com.loginmodule.learning:id/textInputEditTextConfirmPassword"
+    direction: DOWN
+- tapOn:
+    id: "com.loginmodule.learning:id/textInputEditTextConfirmPassword"
+- inputText: "12345678"
+- tapOn:
+    id: "com.android.systemui:id/back"
+- scrollUntilVisible:
+    element:
+      id: "com.loginmodule.learning:id/appCompatButtonRegister"
+    direction: DOWN
+- tapOn:
+    id: "com.loginmodule.learning:id/appCompatButtonRegister"
+- assertVisible: "Password Does Not Matches"
+
+

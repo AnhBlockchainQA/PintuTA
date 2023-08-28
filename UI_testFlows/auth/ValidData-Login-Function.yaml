@@ -1,0 +1,32 @@
+# ValidDataResgister.yaml
+appId: com.loginmodule.learning
+---
+- launchApp
+- tapOn:
+    id: "com.miui.home:id/icon_icon"
+    index: 3
+- runScript: "../scripts/loginData.js"
+- assertVisible: "Email"
+- assertVisible:
+    id: "com.loginmodule.learning:id/textInputLayoutEmail"
+- tapOn:
+    id: "com.loginmodule.learning:id/textInputLayoutEmail"
+- inputText: "${output.test_user.email}"
+- assertVisible:
+    id: "com.loginmodule.learning:id/textInputEditTextPassword"
+- tapOn:
+    id: "com.loginmodule.learning:id/textInputEditTextPassword"
+- inputText: "${output.test_user.password}"
+- tapOn:
+    id: "com.android.systemui:id/back"
+- assertVisible: "LOGIN"
+- assertVisible:
+    id: "com.loginmodule.learning:id/appCompatButtonLogin"
+- tapOn:
+    id: "com.loginmodule.learning:id/appCompatButtonLogin"
+- assertVisible: "Android NewLine Learning"
+- assertVisible: "Hello,"
+- assertVisible: "${output.test_user.email}"
+
+
+

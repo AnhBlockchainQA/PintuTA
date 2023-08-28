@@ -1,0 +1,19 @@
+# LoginPageDisplaysCorrectly.yaml
+
+appId: com.loginmodule.learning
+---
+- launchApp
+- tapOn:
+    id: "com.miui.home:id/icon_icon"
+    index: 3
+- assertVisible: "Email"
+- assertVisible:
+    id: "com.loginmodule.learning:id/textInputLayoutEmail"
+- assertVisible:
+    id: "com.loginmodule.learning:id/textInputEditTextPassword"
+- assertVisible: "LOGIN"
+- assertVisible:
+    id: "com.loginmodule.learning:id/appCompatButtonLogin"
+- assertVisible: "No account yet? Create one"
+- assertVisible:
+    id: "com.loginmodule.learning:id/textViewLinkRegister"

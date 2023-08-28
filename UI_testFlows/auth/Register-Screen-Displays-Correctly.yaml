@@ -20,6 +20,10 @@ appId: com.loginmodule.learning
 - assertVisible: "REGISTER"
 - assertVisible:
     id: "com.loginmodule.learning:id/appCompatButtonRegister"
+- scrollUntilVisible:
+    element:
+      id: "com.loginmodule.learning:id/appCompatTextViewLoginLink"
+    direction: DOWN
 - assertVisible: "Already a member? Login"
 - assertVisible:
     id: "com.loginmodule.learning:id/appCompatTextViewLoginLink"

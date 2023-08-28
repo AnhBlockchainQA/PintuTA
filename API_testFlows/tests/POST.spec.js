@@ -4,12 +4,12 @@ test('POST response has the correct response compared to the inputted', async ({
   const response = await request.post('/posts', {
     data:{
       title: "recommendation",
-      body: "Mtorcycle",
+      body: "Motorcycle",
       userId: 13
     }
   });
   expect(response.ok()).toBeTruthy();
   expect(await response.json()).toEqual(expect.objectContaining({
-    title: "recommendation",body: "Mtorcycle",userId: 13
+    title: "recommendation",body: "Motorcycle",userId: 13
   }));
 })

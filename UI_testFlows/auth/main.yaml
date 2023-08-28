@@ -2,4 +2,6 @@ appId: com.loginmodule.learning
 ---
 - runFlow: "Login-Screen-Displays-Correctly.yaml"
 - runFlow: "Register-Screen-Displays-Correctly.yaml"
-- runFlow: "Register-Function.yaml"
+- runFlow: "ValidData-Login-Function.yaml"
+- runFlow: "ValidData-Register-Function.yaml"
+- runFlow: "InvalidData-Register-Function.yaml"

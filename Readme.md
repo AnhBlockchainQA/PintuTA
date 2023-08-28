@@ -1,18 +1,38 @@
-# Maestro samples
+# Pintu Technical Assessment
 
-`maestro download-samples` provides a set of flows and apps so that users can quickly set up a maestro test, without having to create an app.
+## UI_Test_Flows
 
-download-samples downloads these files and apps from storage.googleapis.com.
+Test Mobile UI, I use the **maestro** tool
+link https://github.com/mobile-dev-inc/maestro
 
-# Update the samples
+All test cases are saved in a folder named **auth** with the file extension _.yaml_
 
-Although the samples are checked in, updating them requires a few manual steps:
+inside the .yaml file will contain test cases, test steps, test elements I inspect from the mobile interface of the app
 
-* Change the samples in this directory and merge these changes
-* Run `maestro download-samples`
-* Copy *.yaml to the samples directory created by download-samples
-* Run `(cd samples && zip -r "$OLDPWD/samples.zip" . -x "/**/.*" -x "__MACOSX")`
-* Open https://console.cloud.google.com/storage/browser/mobile.dev/samples
-* Upload samples.zip
-* Adjust the permissions of samples.zip to "Public to Internet"
-* Run `maestro download-samples` and verify that the change was successful
+Besides, I have written 2 scripts located in the UI_testtFlows/scripts folder to generate test data for **login** and **registration** functions.
+To run all test cases we do the following
+
+`cd UI_testFlows/auth`
+
+and run the following command `maestro test main.yaml`
+
+if you want to run any test flow, just simply change name file _main.yaml_ to any test flow others
+for example: `maestro test ValidData-Register-Function.yaml`
+and finally to export the report we can run the following command
+```maestro test --format junit UI_testFlows/auth``` ref https://maestro.mobile.dev/cli/test-suites-and-reports
+please see how i run it with this video: 
+
+
+## API_Test_Flows
+
+API testing, I get it in the directory API_test Flows/tests
+I use **playwright** test tool to run tests and manage reports see more on this website https://playwright.dev/docs/api-testing
+I write 2 test cases inside the tests folder corresponding to 2 methods Get and Post as required
+run as follows:
+_cd API_testFlows/tests_
+_npx playwright test_ to run all test cases with filename containing *.spect.js
+or _npx playwright test name_file_testcases_ to run each file
+and finally to display the report
+you use this command _npx playwright show-report_
+please watch this video to see me explain and demo
+

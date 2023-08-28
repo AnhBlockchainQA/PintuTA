@@ -25,23 +25,23 @@ please see how i run it with this video:
 
 ## API_Test_Flows
 
-API testing, I get it in the directory API_test Flows/tests
+* API testing, I get it in the directory API_test Flows/tests
 
-I use **playwright** test tool to run tests and manage reports see more on this website https://playwright.dev/docs/api-testing
+* I use **playwright** test tool to run tests and manage reports see more on this website https://playwright.dev/docs/api-testing
 
-I write 2 test cases inside the tests folder corresponding to 2 methods Get and Post as required
+* I write 2 test cases inside the tests folder corresponding to 2 methods Get and Post as required
 
-run as follows:
+* run as follows:
 
-_cd API_testFlows/tests_
+* _cd API_testFlows/tests_
 
-_npx playwright test_ to run all test cases with filename containing *.spect.js
+* _npx playwright test_ to run all test cases with filename containing *.spect.js
 
-or _npx playwright test name_file_testcases_ to run each file
+* or _npx playwright test name_file_testcases_ to run each file
 
-and finally to display the report
+* and finally to display the report
 
-you use this command _npx playwright show-report_
+* you use this command _npx playwright show-report_
 
-please watch this video to see me explain and demo
+* please watch this video to see me explain and demo
 
